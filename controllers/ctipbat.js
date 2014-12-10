@@ -16,7 +16,7 @@ exports.eventModif = function(req, res) {
 }
 
 exports.noNomBat = function(req, res) {
-	var query = 'SELECT bat.id_bat, bat_dgeo.id_bat_dgeo, nom_bat, ctip_bat_nom FROM bat_dgeo, bat WHERE bat.id_bat=bat_dgeo.id_bat AND ctip_bat_nom IS NULL ORDER BY bat_dgeo.id_bat_dgeo';
+	var query = "SELECT * FROM ctip_no_bat_nom ORDER BY id_bat_dgeo";
 	pg.connect(connectString, function(err, client, done) {
 		if(err) { return console.error('Problème de connection à la base de données', err); }
 		client.query(query, null, function(err, result) {
