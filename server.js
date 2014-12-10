@@ -39,7 +39,7 @@ app.get('/login', ctrlLogin.loginView);
 app.post('/login', passport.authenticate('local'), ctrlLogin.loginPost);
 app.get('/logout', ctrlLogin.logout);
 
-//lib JS sclients
+//lib JS clients
 app.use('/lib', express.static(__dirname + '/client/lib'));
 
 //client index
@@ -66,10 +66,12 @@ app.get('/etb/:idEtabl/geocode.html', auth.check, function(req, res){
 });
 
 //client ctip
+app.get('/admin', ctrlLogin.loginCtipView);
+app.post('/admin', passport.authenticate('local'), ctrlLogin.loginCtipPost);
 app.use('/ctip/js', express.static(__dirname + '/client/ctip/js'));
 app.use('/ctip/css', express.static(__dirname + '/client/ctip/css'));
 app.use('/ctip/partials', express.static(__dirname + '/client/ctip/partials'));
-app.get('/ctip/', function(req, res){
+app.get('/ctip', auth.checkCtip, function(req, res){
 	res.sendFile(__dirname + '/client/ctip/index.html');
 });
 

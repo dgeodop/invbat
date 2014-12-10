@@ -15,9 +15,17 @@ exports.loginView = function (req, res) {
 	});
 }
 
+exports.loginCtipView = function (req, res) {
+	res.render('loginCtip');
+}
+
 exports.loginPost = function(req,res){
 	var idEtabl = req.user.id;
 	res.redirect('/etb/' + idEtabl + '/');
+}
+
+exports.loginCtipPost = function (req, res) {
+	res.redirect('/ctip/');
 }
 
 exports.logout = function(req, res){
