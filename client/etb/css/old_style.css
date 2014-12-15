@@ -22,12 +22,3 @@ h4 a {
 	color: #707070 ;
 	font-weight: bold;
 }
-
-.navbar-default {
-	background-image: linear-gradient(to bottom, #54A954, #FFF);
-	border-color: white;
-}
-
-.active {
-	background-color: #d8e8d0;
-}

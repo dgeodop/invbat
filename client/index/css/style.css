@@ -1,0 +1,8 @@
+.navbar-default {
+	background-image: linear-gradient(to bottom, #54A954, #FFF);
+}
+
+.active {
+	background-color: #d8e8d0;
+	border-color: white;
+}
