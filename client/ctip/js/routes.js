@@ -18,5 +18,6 @@ routes.config(['$routeProvider',
 	.when('/modifsparetabl/:idEtabl', {templateUrl: 'partials/modifsparetablvue.html'})
 	.when('/modifspartype', {templateUrl: 'partials/modifspartype.html'})
 	.when('/modifspartype/:typEvent', {templateUrl: 'partials/modifspartypevue.html'})
+	.when('/maj_bat', {templateUrl: 'partials/maj_bat.html'})
  	.otherwise({redirectTo: '/'});
  }]);

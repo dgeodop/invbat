@@ -19,8 +19,9 @@ var ctrlLogin = require('./controllers/login');
 var ctrlCarte = require('./controllers/carte');
 var ctrlCtip = require('./controllers/ctip');
 var ctrlCtipBat = require('./controllers/ctipbat');
-var ctrlLagapeo = requie('./controllers/lagapeo');
+var ctrlLagapeo = require('./controllers/lagapeo');
 var ctrlGeo = require('./controllers/geo');
+var ctrlMaj = require('./controllers/maj');
 
 //config
 app.set('views', './views');
@@ -139,6 +140,8 @@ app.get('/api/lagapeo/bat/:idBatDgeo', ctrlLagapeo.bat);
 app.get('/api/geo', ctrlGeo.tous);
 app.get('/api/geo/etabl/:idEtabl', ctrlGeo.etabl);
 app.get('/api/geo/bat/:idBat', ctrlGeo.bat);
+
+app.get('/api/maj/bat', ctrlMaj.bat);
 
 //démarrer server
 var port = process.env.PORT || 3000;

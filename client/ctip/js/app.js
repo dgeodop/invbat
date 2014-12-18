@@ -17,7 +17,8 @@ var app = angular.module('appCtip',  [
 	'ctrlModifsParEtabl',
 	'ctrlModifsParType',
 	'ctrlModifsParEtablVue',
-	'ctrlModifsParTypeVue'
+	'ctrlModifsParTypeVue',
+	'ctrlMajBat'
 ]);
 
 
