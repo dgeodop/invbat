@@ -1,5 +1,5 @@
 {
-  "name": "inventaire-bâtiments",
+  "name": "inventaire-batiments",
   "version": "1.0.0",
   "description": "outil pour l inventaire des bâtiments de la DGEO - état de Vaud",
   "main": "server.js",
