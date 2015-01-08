@@ -10,6 +10,7 @@ exports.tous = function(req, res) {
 			done();
 			if(err) { return console.error('lagapeo.tous', err) }
 			var results = JSON.stringify(result.rows);
+			res.header('Access-Control-Allow-Origin','*');
 			res.send(results);
 		});
 	});
@@ -24,6 +25,7 @@ exports.etabl = function(req, res) {
 			done();
 			if(err) { return console.error('lagapeo.etabl', err) }
 			var results = JSON.stringify(result.rows);
+			res.header('Access-Control-Allow-Origin','*');
 			res.send(results);
 		});
 	});
@@ -38,6 +40,7 @@ exports.bat = function(req, res) {
 			done();
 			if(err) { return console.error('lagapeo.bat', err) }
 			var results = JSON.stringify(result.rows);
+			res.header('Access-Control-Allow-Origin','*');
 			res.send(results);
 		});
 	});

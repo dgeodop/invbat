@@ -10,6 +10,7 @@ exports.tous = function(req, res) {
 			done();
 			if(err) { return console.error('geo.tous', err) }
 			var results = JSON.stringify(result.rows);
+			res.header('Access-Control-Allow-Origin','*');
 			res.send(results);
 		});
 	});
@@ -39,6 +40,7 @@ exports.bat = function(req, res) {
 			done();
 			if(err) { return console.error('geo.bat', err) }
 			var results = JSON.stringify(result.rows);
+			res.header('Access-Control-Allow-Origin','*');
 			res.send(results);
 		});
 	});
@@ -53,6 +55,7 @@ exports.etiq = function(req, res) {
 			done();
 			if(err) { return console.error('geo.etiq', err) }
 			var results = JSON.stringify(result.rows);
+			res.header('Access-Control-Allow-Origin','*');
 			res.send(results);
 		});
 	});
