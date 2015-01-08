@@ -140,8 +140,13 @@ app.get('/api/lagapeo/bat/:idBatDgeo', ctrlLagapeo.bat);
 app.get('/api/geo', ctrlGeo.tous);
 app.get('/api/geo/etabl/:idEtabl', ctrlGeo.etabl);
 app.get('/api/geo/bat/:idBat', ctrlGeo.bat);
+app.get('/api/geo/etiq/:idEtabl', ctrlGeo.etiq);
 
 app.get('/api/maj/bat', ctrlMaj.bat);
+app.get('/api/maj/bat_dgeo', ctrlMaj.bat_dgeo);
+app.get('/api/maj/etabl', ctrlMaj.etabl);
+app.get('/api/maj/event', ctrlMaj.event);
+app.get('/api/maj/sal', ctrlMaj.sal);
 
 //démarrer server
 var port = process.env.PORT || 3000;
