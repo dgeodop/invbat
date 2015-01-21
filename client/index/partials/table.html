@@ -1,0 +1,71 @@
+<div ng-controller="ctrlTable">
+	<a href="#/liste_etabl/{{idEtabl}}">
+		<button class="btn btn-default">
+			<span class="glyphicon glyphicon-step-backward"></span> Retour
+		</button>
+	</a>
+	<a href="/carte/{{idEtabl}}">
+		<button class="btn btn-default">
+			<span class="glyphicon glyphicon-map-marker"></span> Carte
+		</button>
+	</a>
+	<br><br>
+	<table class="table table-bordered table-condensed">
+		<tr class="active">
+			<td>ID</td>
+			<td>NOM</td>
+			<td>CLASSES</td>
+			<td>ECOFAM</td>
+			<td>SCN</td>
+			<td>ACT</td>
+			<td>DEGAG</td>
+			<td>TM</td>
+			<td>OPT</td>
+			<td>DESSIN</td>
+			<td>GYM</td>
+			<td>INFO</td>
+			<td>MUSIQ</td>
+			<td>RYTHM</td>
+			<td>MULTI</td>
+			<td>AUTRE</td>
+			<td>AULA</td>
+			<td>BIBL</td>
+			<td>ECON</td>
+			<td>GDESAL</td>
+			<td>INFIRM</td>
+			<td>PPLS</td>
+			<td>REF</td>
+			<td>MAITR</td>
+			<td>DEC</td>
+			<td>SECR</td>
+		</tr>
+		<tr ng-repeat="bat in bats">
+			<td>{{bat.id_bat_dgeo}}</td>
+			<td>{{bat.nom_bat}}</td>
+			<td>{{bat.sal_classes}}</td>
+			<td>{{bat.eco_fam}}</td>
+			<td>{{bat.scn}}</td>
+			<td>{{bat.act}}</td>
+			<td>{{bat.degag}}</td>
+			<td>{{bat.tm}}</td>
+			<td>{{bat.opt}}</td>
+			<td>{{bat.dessin}}</td>
+			<td>{{bat.gym}}</td>
+			<td>{{bat.info}}</td>
+			<td>{{bat.musiq}}</td>
+			<td>{{bat.rythm}}</td>
+			<td>{{bat.multi}}</td>
+			<td>{{bat.autre}}</td>
+			<td>{{bat.aula}}</td>
+			<td>{{bat.bibl}}</td>
+			<td>{{bat.econ}}</td>
+			<td>{{bat.gdesal}}</td>
+			<td>{{bat.infirm}}</td>
+			<td>{{bat.ppls}}</td>
+			<td>{{bat.ref}}</td>
+			<td>{{bat.maitr}}</td>
+			<td>{{bat.dec}}</td>
+			<td>{{bat.secr}}</td>
+		</tr>
+	</table>
+</div>

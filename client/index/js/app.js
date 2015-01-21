@@ -7,7 +7,8 @@ var app = angular.module('appIndex',  [
 	'ctrlEtabl',
 	'ctrlBat',
 	'ctrlBatEtabl',
-	'ctrlSal'
+	'ctrlSal',
+	'ctrlTable'
 ]);
 
 
