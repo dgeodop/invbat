@@ -22,6 +22,7 @@ var ctrlCtipBat = require('./controllers/ctipbat');
 var ctrlLagapeo = require('./controllers/lagapeo');
 var ctrlGeo = require('./controllers/geo');
 var ctrlMaj = require('./controllers/maj');
+var ctrlTables = require('./controllers/tables');
 
 //config
 app.set('views', './views');
@@ -148,6 +149,8 @@ app.get('/api/maj/etabl', ctrlMaj.etabl);
 app.get('/api/maj/event', ctrlMaj.event);
 app.get('/api/maj/sal', ctrlMaj.sal);
 
+app.get('/api/tables/etablSal/:idEtabl', ctrlTables.etablSal);
+app.get('/api/tables/vueCtip', ctrlTables.vueCtip);
 //démarrer server
 var port = process.env.PORT || 3000;
 app.listen(port, function() { console.log('Listening on ' + port); });
