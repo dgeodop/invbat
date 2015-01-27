@@ -7,13 +7,16 @@
 	<h3>Noms relatifs d'établissement</h3>
 	<table class="table">
 		<tr class="active">
-			<td>NOM</td>
+			<td>SAP</td>
+			<td>NOM LONG</td>
 			<td>NOM RELATIF</td>
 			<td></td>
 		</tr>
 		<tr ng-repeat="etabl in etabls">
-			<td>{{etabl.nom_court}}</td>
+			<td>{{etabl.sap}}</td>
+			<td>{{etabl.nom_long}}</td>
 			<td>{{etabl.ctip_nom_relatif}}</td>
+			
 			<td>
 				<form class="form-inline">
 					<input class="form-control" type="text" ng-model="etabl.nomRelatif">

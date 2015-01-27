@@ -5,12 +5,43 @@
 		</button>
 	</a>
 	<br><br>
-	<p>ID: <strong>{{bat.id_bat}}</strong></p>
-	<p>NOM: <strong>{{bat.nom_bat}}</strong></p>
-	<p>NOM COURT ACTUEL: <strong>{{bat.ctip_bat_nom}}</strong></p>
+	<table class="table">
+		<tr>
+			<td class="active">ID_BAT_DGEO</td>
+			<td>{{bat.id_bat_dgeo}}</td>
+		</tr>
+		<tr>
+			<td class="active">NOM</td>
+			<td>{{bat.nom_bat}}</td>
+		</tr>
+		<tr>
+			<td class="active">NOM COURT ACTUEL</td>
+			<td><b>{{bat.ctip_bat_nom}}</b></td>
+		</tr>
+		<tr>
+			<td class="active">ID_ETABL</td>
+			<td>{{bat.id_etabl}}</td>
+		</tr>
+		<tr>
+			<td class="active">SAP</td>
+			<td>{{bat.sap}}</td>
+		</tr>
+		<tr>
+			<td class="active">NOM_ETABL</td>
+			<td>{{bat.ctip_nom_court}}</td>
+		</tr>
+		<tr>
+			<td class="active">LOCALITE</td>
+			<td>{{bat.localite}}</td>
+		</tr>
+		<tr>
+			<td class="active">LOC_CTIP</td>
+			<td>{{bat.ctip_localite}}</td>
+		</tr>
+	</table>
 	<p>
 		<form class="form-inline">
-			<input type="text"  ng-model="bat.nouvNomCourt">
+			<input type="text" class="form-control" ng-model="bat.nouvNomCourt">
 			<button class="btn btn-primary" ng-click="app.modifNomCourt(bat)">Remplacer nom court</button>
 		</form>
 	</p>
