@@ -7,6 +7,8 @@
 	<h3>Modifications récentes</h3>
 	<table class="table">
 		<tr class="active">
+			<td>ID_ETABL</td>
+			<td>NOM_ETABL</td>
 			<td>EVENT</td>
 			<td>DATE</td>
 			<td>NOM</td>
@@ -15,7 +17,9 @@
 			<td></td>
 		</tr>
 		<tr ng-repeat="event in events">
-			<td>{{event.typ_event | date:format:'shortDate'}}</td>
+			<td>{{event.id_etabl}}</td>
+			<td>{{event.ctip_nom_court}}</td>
+			<td>{{event.typ_event | date:'mediumDate'}}</td>
 			<td>{{event.date_modif}}</td>
 			<td>{{event.nom_bat}}</td>
 			<td>{{event.ctip_bat_nom}}</td>

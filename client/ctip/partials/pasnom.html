@@ -9,14 +9,18 @@
 		<tr class="active">
 			<td>ID</td>
 			<td>NOM</td>
+			<td>ID_ETABL</td>
 			<td>ETABL</td>
+			<td>LOCALITE</td>
 			<td>UTIL</td>
 			<td></td>
 		</tr>
 		<tr ng-repeat="bat in bats">
 			<td>{{bat.id_bat_dgeo}}</td>
 			<td>{{bat.nom_bat}}</td>
+			<td>{{bat.id_etabl}}</td>
 			<td>{{bat.ctip_nom_court}}</td>
+			<td>{{bat.localite}}</td>
 			<td>{{bat.util}}</td>
 			<td>
 				<form class="form-inline">
