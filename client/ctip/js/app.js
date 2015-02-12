@@ -7,6 +7,7 @@ var app = angular.module('appCtip',  [
 	'ctrlEventNom',
 	'ctrlPasNomBat',
 	'ctrlTous',
+	'ctrlTousEtabl',
 	'ctrlComment',
 	'ctrlClItin',
 	'ctrlNomCourt',
