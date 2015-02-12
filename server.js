@@ -23,6 +23,7 @@ var ctrlLagapeo = require('./controllers/lagapeo');
 var ctrlGeo = require('./controllers/geo');
 var ctrlMaj = require('./controllers/maj');
 var ctrlTables = require('./controllers/tables');
+var ctrlCompteurs = require('./controllers/compteurs');
 
 //config
 app.set('views', './views');
@@ -152,6 +153,12 @@ app.get('/api/maj/sal', ctrlMaj.sal);
 
 app.get('/api/tables/etablSal/:idEtabl', ctrlTables.etablSal);
 app.get('/api/tables/vueCtip', ctrlTables.vueCtip);
+
+app.get('/api/compteurs/bat', ctrlCompteurs.bat);
+app.get('/api/compteurs/bat_dgeo', ctrlCompteurs.batDgeo);
+app.get('/api/compteurs/util', ctrlCompteurs.util);
+app.get('/api/compteurs/paretabl', ctrlCompteurs.parEtabl);
+
 //démarrer server
 var port = process.env.PORT || 3000;
 app.listen(port, function() { console.log('Listening on ' + port); });
