@@ -41,6 +41,20 @@ exports.tousBat = function(req, res) {
 	});
 }
 
+exports.tousBatEtabl = function(req, res) {
+	var idEtabl = req.params.idEtabl;
+	var query = 'SELECT bat.id_bat, id_bat_dgeo, nom_bat, ctip_bat_nom, util FROM bat, bat_dgeo WHERE bat.id_bat=bat_dgeo.id_bat AND id_etabl=$1 ORDER BY id_bat_dgeo';
+	pg.connect(connectString, function(err, client, done) {
+		if(err) { return console.error('Problème de connection à la base de données', err); }
+		client.query(query, [idEtabl], function(err, result) {
+			done();
+			if(err) { return console.error('ctrlCtipBat.tousBat', err); }
+			var bats = result.rows;
+			res.send(bats);
+		});
+	});
+}
+
 exports.unBat = function(req, res) {
 	var idBat = req.params.idBat;
 	var query = 'SELECT * FROM ctip_bat_detail WHERE id_bat=$1';

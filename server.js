@@ -125,6 +125,7 @@ app.get('/ctip/modifsParEtabl/:idEtabl', ctrlCtip.modifsParEtabl);
 app.get('/ctip/event', ctrlCtipBat.eventModif);
 app.get('/ctip/nonombat', ctrlCtipBat.noNomBat);
 app.get('/ctip/tousbat', ctrlCtipBat.tousBat);
+app.get('/ctip/tousbatetabl/:idEtabl', ctrlCtipBat.tousBatEtabl);
 app.get('/ctip/unbatdgeo/:idBatDgeo', ctrlCtipBat.unBatDgeo);
 app.get('/ctip/unbat/:idBat', ctrlCtipBat.unBat);
 app.post('/ctip/nomcourt/:idBat', ctrlCtipBat.modifNomCourt);
