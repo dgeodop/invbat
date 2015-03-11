@@ -8,10 +8,16 @@ ctrlComment.controller("ctrlComment", function($http, $scope, $routeParams){
 	.success(function(data) {
 		$scope.bat = data;	
 		app.modifComment = function(bat) {
-			$http.post('/ctip/comment', bat)
-			.success(function(data) {
-				$scope.bat = data;
-			})
+			if(bat.nouvComment == undefined) {
+				alert('Case nulle');
+			} else if(bat.nouvComment == '') {
+				alert('Case nulle');
+			} else {
+				$http.post('/ctip/comment', bat)
+				.success(function(data) {
+					$scope.bat = data;
+				})
+			}
 		} 
 	});
 });

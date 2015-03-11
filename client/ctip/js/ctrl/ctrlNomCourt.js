@@ -8,10 +8,16 @@ ctrlNomCourt.controller("ctrlNomCourt", function($http, $scope, $routeParams){
 	.success(function(data) {
 		$scope.bat = data;	
 		app.modifNomCourt = function(bat) {
-			$http.post('/ctip/nomcourt2', bat)
-			.success(function(data) {
-				$scope.bat = data;
-			})
+			if(bat.nouvNomCourt == undefined) {
+				alert('Case nulle')
+			} else if(bat.nouvNomCourt == '') {
+				alert('Case nulle')
+			} else {
+				$http.post('/ctip/nomcourt2', bat)
+				.success(function(data) {
+					$scope.bat = data;
+				})
+			}
 		} 
 	});
 });

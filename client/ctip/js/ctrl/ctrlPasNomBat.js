@@ -6,12 +6,18 @@ ctrlPasNomBat.controller("ctrlPasNomBat", function($scope, $http) {
 	.success(function(data) {
 		$scope.bats = data;
 		app.ajoutNomCtip = function(bat) {
-			idBat = bat.id_bat;
-			nouvNomCtip = bat.nouvNomCtip;
-			$http.post('/ctip/nomcourt/' + idBat, bat)
-			.success(function(data) {
-				$scope.bats = data;
-			});
+			if(bat.nouvNomCtip == undefined) {
+				alert('Case nulle');
+			} else if(bat.nouvNomCtip == '') {
+				alert('Case nulle');
+			} else {
+				idBat = bat.id_bat;
+				nouvNomCtip = bat.nouvNomCtip;
+				$http.post('/ctip/nomcourt/' + idBat, bat)
+				.success(function(data) {
+					$scope.bats = data;
+				});
+			}
 		}
 	});
 });

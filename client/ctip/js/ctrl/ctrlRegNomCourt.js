@@ -6,11 +6,17 @@ ctrlRegNomCourt.controller("ctrlRegNomCourt", function($http, $scope, $routePara
 	.success(function(data) {
 		$scope.regs = data;
 		app.modifNomCourt = function(event) {
-			var idReg = event.id_reg;
-			$http.post('/ctip/nomreg/' + idReg, event)
-			.success(function(data) {
-				$scope.regs = data;
-			})
+			if(event.nomRegCtip == undefined) {
+				alert('Case nulle');
+			} else if(event.nomRegCtip == '') {
+				alert('Case nulle')
+			} else {
+				var idReg = event.id_reg;
+				$http.post('/ctip/nomreg/' + idReg, event)
+				.success(function(data) {
+					$scope.regs = data;
+				})
+			}
 		}
 	});
 });

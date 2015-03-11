@@ -13,12 +13,19 @@ ctrlEventNom.controller("ctrlEventNom", function($scope, $http) {
 			})		
 		}
 		app.modifNomCtip = function(event) {
-			var idBat = event.id_bat;
-			var nouvNom = event.nouvNomCtip;
-			$http.post("/ctip/ajoutnomcourt/" + idBat, event)
-			.success(function(data) {
-				$scope.events = data;
-			})		
+			console.log(event)
+			if(event.nouvNomCtip == undefined) {
+				alert('Case nulle');
+			} else if(event.nouvNomCtip == '') {
+				alert('Case nulle');
+			} else {
+				var idBat = event.id_bat;
+				var nouvNom = event.nouvNomCtip;
+				$http.post("/ctip/ajoutnomcourt/" + idBat, event)
+				.success(function(data) {
+					$scope.events = data;
+				})		
+			}
 		}
 	});
 });

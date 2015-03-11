@@ -6,11 +6,17 @@ ctrlEtablNomRelatif.controller("ctrlEtablNomRelatif", function($http, $scope, $r
 	.success(function(data) {
 		$scope.etabls = data;	
 		app.modifNomRelatif = function(event) {
-			var idEtabl = event.id_etabl;
-			$http.post('/ctip/nomreletabl/' + idEtabl, event)
-			.success(function(data) {
-				$scope.etabls = data;
-			})
+			if(event.nomRelatif == undefined) {
+				alert('Case nulle')
+			} else if(event.nomRelatif == '') {
+				alert('Case nulle')
+			} else {
+				var idEtabl = event.id_etabl;
+				$http.post('/ctip/nomreletabl/' + idEtabl, event)
+				.success(function(data) {
+					$scope.etabls = data;
+				})
+			}
 		}
 	});
 });

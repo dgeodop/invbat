@@ -6,11 +6,17 @@ ctrlEtablNomCourt.controller("ctrlEtablNomCourt", function($http, $scope, $route
 	.success(function(data) {
 		$scope.etabls = data;	
 		app.modifNomCourt = function(event) {
-			var idEtabl = event.id_etabl;
-			$http.post('/ctip/nometabl/' + idEtabl, event)
-			.success(function(data) {
-				$scope.etabls = data;
-			})
+			if(event.nomCourt == '') {
+				alert('Case nulle');
+			} else if (event.nomCourt == undefined) {
+				alert('Case nulle');
+			} else {
+				var idEtabl = event.id_etabl;
+				$http.post('/ctip/nometabl/' + idEtabl, event)
+				.success(function(data) {
+					$scope.etabls = data;
+				});
+			}
 		}
 	});
 });
